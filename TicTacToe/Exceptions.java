@@ -4,3 +4,9 @@ class NotEnoughPlayersException extends Exception{
         super(message);
     }
 }
+
+class PlaceOccupiedException extends Exception{
+    public PlaceOccupiedException(String message){
+        super(message);
+    }
+}

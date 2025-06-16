@@ -19,7 +19,7 @@ public class Main{
                 System.out.println("Caught Exception: " + e.getMessage());
             }
         }
-        
+        System.out.println("Lets Start the Game");
         Game g = new Game(3, arr);
     }
 
