@@ -16,11 +16,14 @@ public class Game {
             playerList.add(new Players(playerNames[i], assignedPiece));
         }
         b = new Board(size);
+        System.out.println();
+        printPlayerPieceType(playerList);
+        System.out.println();
         initializeGame();
     }
 
     public void initializeGame(){
-        System.out.println("Does Nothing yet");
+        b.printBoard();
     }
 
     public void printPlayerPieceType(Queue<Players> playerList){
@@ -30,4 +33,5 @@ public class Game {
             System.out.println("Assigned piece to player " + p.getName() + " is " + p.getPiece());
         }
     }
+
 }
