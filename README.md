@@ -1,5 +1,7 @@
-This repository contains Design Case Studies:
+# Design Case Studies
 
-Tic-Tac-Toe
+## Case Studies
+- Tic-Tac-Toe
 
-Design Patterns
+## Design Patterns
+
