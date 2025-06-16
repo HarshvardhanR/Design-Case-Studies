@@ -8,7 +8,7 @@ public class Game {
     Queue<Players> playerList;
     Board b;
 
-    public Game(int size, String... playerNames){
+    public Game(int size, String[] playerNames){
         playerList = new LinkedList<>();
         PieceType ptArray[] = PieceType.values();
         for(int i=0; i<playerNames.length; i++){
