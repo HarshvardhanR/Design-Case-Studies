@@ -1,6 +1,4 @@
-# Design Case Studies
-
-## Case Studies
+## Design Case Studies
 - Tic-Tac-Toe
 
 ## Design Patterns
