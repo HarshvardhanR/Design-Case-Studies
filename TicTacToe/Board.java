@@ -1,6 +1,7 @@
 package TicTacToe;
 
 public class Board {
+    
     int size;
     int board[][];
 

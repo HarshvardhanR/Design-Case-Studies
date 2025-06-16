@@ -8,4 +8,12 @@ public class Players {
         this.name = name;
         this.p = p;
     }
+
+    public PieceType getPiece(){
+        return p;
+    }
+
+    public String getName(){
+        return name;
+    }
 }
