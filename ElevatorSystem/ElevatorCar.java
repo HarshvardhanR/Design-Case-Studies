@@ -7,5 +7,6 @@ public class ElevatorCar {
     int id;
     State state ;
     List<InternalButton> buttons = new ArrayList<>();
-    Display d;
+    Display dis;
+    Direction dir;
 }
