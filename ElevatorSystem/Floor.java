@@ -13,5 +13,6 @@ public class Floor {
     }
 
     public void pressButton(Direction dir, ExternalButton b){
+        
     }
 }
