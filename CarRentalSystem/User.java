@@ -2,14 +2,18 @@ package CarRentalSystem;
 
 public class User {
     private final int userId;
-    private final Reservation r;
+    private Reservation r;
     private final String drivinglicenseNo;
 
-    public User(int userId, Reservation r, String drivinglicenseNo){
+    public User(int userId, String drivinglicenseNo){
         this.userId = userId;
-        this.r = r;
         this.drivinglicenseNo = drivinglicenseNo;
     }
+
+    public void setReservation(Reservation r){
+        this.r = r;
+    }
+
     public int getUserID(){
         return userId;
     }
