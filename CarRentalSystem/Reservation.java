@@ -17,6 +17,7 @@ public class Reservation {
         this.to = cal.getTime();
         this.rentalStore = rentalStore;
         this.user = user;
+        v.setVehicleState(VehicleState.NOT_AVAILABLE);
     }
 
     public Date getFrom(){

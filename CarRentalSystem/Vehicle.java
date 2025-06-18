@@ -20,6 +20,13 @@ public class Vehicle {
         return model;
     }
 
+    public String getLicensePlate(){
+        return licensePlate;
+    }
+
+    public VehicleState getVehicleState(){
+        return vehicleState;
+    }
     public void setVehicleState(VehicleState vehicleState){
         this.vehicleState = vehicleState;
     }
