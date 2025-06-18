@@ -1,7 +1,5 @@
 package CarRentalSystem;
 
-import java.util.ArrayList;
-
 public class RentalStore {
     Location location;
     VehicleInventory vehicleInventory;
