@@ -18,6 +18,7 @@ public class Dice {
         int diceUsed = 0;
         while(diceUsed<diceCount){
             accumulatedNumber += rand.nextInt(max - min + 1) + min;
+            diceUsed++;
         }
         return accumulatedNumber;
     }

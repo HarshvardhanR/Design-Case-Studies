@@ -26,7 +26,7 @@ public class Board {
         while (numberOfSnakes > 0) {
             int start = rand.nextInt(max);
             int end = rand.nextInt(max);
-            if (start <= end) continue;  // Snakes go down
+            if (start <= end) continue;
 
             Cell cell = getCell(start);
             if (cell.getProp() != null) continue;
@@ -39,7 +39,7 @@ public class Board {
         while (numberOfLadders > 0) {
             int start = rand.nextInt(max);
             int end = rand.nextInt(max);
-            if (start >= end) continue;  // Ladders go up
+            if (start >= end) continue;
 
             Cell cell = getCell(start);
             if (cell.getProp() != null) continue;
