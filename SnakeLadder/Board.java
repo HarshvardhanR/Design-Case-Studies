@@ -1,37 +1,63 @@
 package SnakeLadder;
 
 import java.util.Random;
-public class Board {
-    Cell [][] cells;
 
-    public Board(int size, int numberOfSnakes, int numberOfLadders){
+public class Board {
+    private Cell[][] cells;
+
+    public Board(int size, int numberOfSnakes, int numberOfLadders) {
         initializeBoard(size);
-        addSnakesAndLadders(numberOfSnakes,numberOfLadders, cells);
+        addSnakesAndLadders(numberOfSnakes, numberOfLadders);
     }
 
-    public void initializeBoard(int size){
-        for(int i=0; i<size; i++){
-            for(int j=0; j<size; j++){
+    private void initializeBoard(int size) {
+        cells = new Cell[size][size];  // FIXED: initialize the 2D array
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
                 cells[i][j] = new Cell();
             }
         }
     }
 
-    public void addSnakesAndLadders(int numberOfSnakes, int numberOfLadders, Cell[][] cells){
+    private void addSnakesAndLadders(int numberOfSnakes, int numberOfLadders) {
         Random rand = new Random();
-        while(numberOfSnakes>0){
-            int start = rand.nextInt(96 - 15 + 1) + 15;
-            int end = rand.nextInt(96 - 15 + 1) + 15;
-            if(start>=end) continue;
+        int max = getSize();
+
+        while (numberOfSnakes > 0) {
+            int start = rand.nextInt(max);
+            int end = rand.nextInt(max);
+            if (start <= end) continue;  // Snakes go down
+
             Cell cell = getCell(start);
-            if(cell.getProp()!=null) continue;
+            if (cell.getProp() != null) continue;
+
             Prop snake = new Prop(start, end);
+            cell.setProp(snake);
+            numberOfSnakes--;
+        }
+
+        while (numberOfLadders > 0) {
+            int start = rand.nextInt(max);
+            int end = rand.nextInt(max);
+            if (start >= end) continue;  // Ladders go up
+
+            Cell cell = getCell(start);
+            if (cell.getProp() != null) continue;
+
+            Prop ladder = new Prop(start, end);
+            cell.setProp(ladder);
+            numberOfLadders--;
         }
     }
 
-    public Cell getCell(int start){
-        int row = start/cells.length;
-        int col = start % cells.length;
+    public Cell getCell(int position) {
+        int size = cells.length;
+        int row = position / size;
+        int col = position % size;
         return cells[row][col];
+    }
+
+    public int getSize() {
+        return cells.length * cells.length;
     }
 }

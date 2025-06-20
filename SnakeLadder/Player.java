@@ -13,6 +13,10 @@ public class Player {
         return currentPostion;
     }
 
+    public void setCurrentPosition(int currentPostion){
+        this.currentPostion = currentPostion;
+    }
+
     public int getID(){
         return id;
     }
