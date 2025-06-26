@@ -33,6 +33,10 @@ public class TheatreRoom {
         }
         return availableSeat;
     }
+
+    public void printDetails(){
+        System.out.println(getScreenType() + " " + getTheatreRoomNum());
+    }
 }
 
 class ImaxTheatreRoom extends TheatreRoom{

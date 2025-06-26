@@ -17,4 +17,10 @@ public class Cinema{
     public List<TheatreRoom> getTheatreRoomsList(){
         return theatreRooms;
     }
+
+    public void printTheatres(){
+        for(int i=0; i<theatreRooms.size(); i++){
+            
+        }
+    }
 }
