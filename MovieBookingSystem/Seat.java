@@ -14,6 +14,24 @@ public class Seat {
     public void setBookedStatus(boolean status){
         booked = status;
     }
+
+    public String getSeatNum(){
+        return no;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(this==obj) return true;
+        if(obj==null || this.getClass()!=obj.getClass()) return false;
+        Seat seat = (Seat) obj;
+        return this.no.equals(seat.getSeatNum());
+    }
+
+    @Override
+    public int hashCode() {
+        return no.hashCode();
+    }
+
 }
 
 class Normal extends Seat{
