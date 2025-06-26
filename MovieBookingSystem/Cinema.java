@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cinema{
-    CityName city;
-    List<TheatreRoom> theatreRooms;
+    private CityName city;
+    private List<TheatreRoom> theatreRooms;
 
     public Cinema(CityName city){
         this.city = city;
@@ -14,9 +14,7 @@ public class Cinema{
         return city;
     }
 
-    public void getTheatreRooms(){
-        for(int i=0; i<theatreRooms.size(); i++){
-            System.out.println("Theatre Available: " + theatreRooms.get(i).getTheatreRoomNum());
-        }
+    public List<TheatreRoom> getTheatreRoomsList(){
+        return theatreRooms;
     }
 }

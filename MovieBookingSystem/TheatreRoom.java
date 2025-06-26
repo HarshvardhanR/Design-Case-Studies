@@ -12,8 +12,16 @@ public class TheatreRoom {
         return screen.getScreenType();
     }
 
+    public Screen getScreen(){
+        return screen;
+    }
+
     public String getTheatreRoomNum(){
         return theatreRoomNum;
+    }
+
+    public List<Seat> getSeatList(){
+        return seats;
     }
 
     public List<Seat> getAvailableSeats(){

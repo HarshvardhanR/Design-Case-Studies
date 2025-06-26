@@ -1,8 +1,16 @@
 public class Screen {
     protected ScreenType screenType;
-
+    protected Movie movie;
     public ScreenType getScreenType(){
         return screenType;
+    }
+
+    public void setMovie(Movie movie){
+        this.movie = movie;
+    }
+
+    public Movie getMovie(){
+        return movie;
     }
 }
 
