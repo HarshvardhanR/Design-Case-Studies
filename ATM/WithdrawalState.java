@@ -3,6 +3,9 @@ public class WithdrawalState extends ATMState{
         if(amount > card.getAvailableBalance()){
             System.out.println("Not enough balace");
         }
+        else if(amount > atm.getMoney()){
+            System.out.println("Not enough money in ATM");
+        }
         else{
             int currCardBalance = card.getAvailableBalance();
             currCardBalance = currCardBalance - amount;
