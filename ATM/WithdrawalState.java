@@ -1,4 +1,8 @@
 public class WithdrawalState extends ATMState{
+
+    public WithdrawalState(ATM atm){
+        super(atm);
+    }
     public void withdrawAmount(int amount, Card card){
         if(amount > card.getAvailableBalance()){
             System.out.println("Not enough balace");
@@ -14,10 +18,11 @@ public class WithdrawalState extends ATMState{
             currMoneyinATM = currMoneyinATM - amount;
             atm.setMoney(currMoneyinATM);
         }
-        atm.setATMState(new SelectOperationState());
+        atm.setATMState(new SelectOperationState(atm));
     }
 
     public void exit(){
         System.out.println("Remove your card!");
+        atm.setATMState(new InsertCardState(atm));
     }
 }

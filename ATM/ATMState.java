@@ -2,6 +2,10 @@
 public abstract class ATMState {
     protected ATM atm;
 
+    public ATMState(ATM atm){
+        this.atm = atm;
+    }
+
     public void insertCard(){
         System.out.println("Oops! Something went wrong");
     }
